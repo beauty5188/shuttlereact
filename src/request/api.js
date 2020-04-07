@@ -1,6 +1,5 @@
-import {post} from './ajax';
+import {post} from './http';
 // 定制班线
 
 //获取线路分类
-
-export const login = param => post('/admin/login', param);
+export const lineClassify = param => post('/ccl/selectLineClassify', param);

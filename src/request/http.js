@@ -2,7 +2,7 @@
 // 请求拦截、相应拦截、错误统一处理
 import axios from 'axios'
 import {getsign} from './sign/checksign'
-import { Toast } from 'mint-ui' // 对应的UI提示工具
+import { Toast } from 'antd-mobile' // 对应的UI提示工具
 import {HashRouter} from 'react-router-dom'
 const router = new HashRouter()
 
@@ -57,6 +57,7 @@ axiosIns.interceptors.request.use(
         let pos = cururl.indexOf('/dist/')
         window.localStorage.setItem('currentpage', cururl.substr(pos + 5))
         router.replace({path: '/wxredirect', query: { code: 'code', state: 'query' }})
+        Promise.reject('去授权')
       }
     }
     var postdata = {}
@@ -103,6 +104,7 @@ axiosIns.interceptors.response.use(
           path: '/refreshtoken',
           query: { redirect: window.location.href }// 直接刷新当前页面
         })
+        return Promise.reject(response)
       }
       return Promise.resolve(response)
     } else {

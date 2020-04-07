@@ -1,0 +1,5 @@
+.home header {padding: 10px 0;background: #fff;}
+.home header table {width: 100%;}
+.home header td {text-align: center;padding: 8px;}
+.home header img {width: 48px;}
+.home header span {display: block;font-size: 14px;padding: 8px;color: #666;}
