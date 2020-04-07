@@ -34,7 +34,15 @@ class Home extends Component {
             </tbody>
           </table>
         </header>
-        <div></div>
+        <div className='container'>
+          <ul>
+            <li>
+              <div>
+                
+              </div>
+            </li>
+          </ul>
+        </div>
         <footer></footer>
       </div>
     )
