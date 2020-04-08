@@ -1,10 +1,45 @@
 import React, { Component } from 'react';
 import './home.css'
-import {lineClassify} from '../request/api'
+import { defaultLine } from '../request/api'
 import matouimg from '../asset/img/jichang.png'
 import youyunimg from '../asset/img/matou.png'
 import dingzhiimg from '../asset/img/yiyuan.png'
 import mayunimg from '../asset/img/zhangjiang.png'
+
+class Lineinfo extends Component {
+  //定义数据
+  constructor(props) {
+    super(props);
+    this.state = {
+      list: [],
+    }
+  }
+  //获取数据
+  componentDidMount() {
+    defaultLine({
+      'lineClassifyId': '1064805524678733825',
+      'currPage': 1,
+      'pageSize': 30
+    }).then(res => {
+      console.log(res.data.lineArray)
+      this.setState({
+        list: res.data.lineArray
+      })
+    })
+  }
+  render() {
+    const linelist = this.state.list.map((line, index) =>
+      <li key={index}>
+        <div className='linestate' style={{background:"url("+ line.pictureUrl +") no-repeat scroll"}}>
+
+        </div>
+      </li>
+    )
+    return (
+      <ul>{linelist}</ul>
+    )
+  }
+}
 
 class Home extends Component {
   render() {
@@ -35,23 +70,11 @@ class Home extends Component {
           </table>
         </header>
         <div className='container'>
-          <ul>
-            <li>
-              <div>
-                
-              </div>
-            </li>
-          </ul>
+          <Lineinfo />
         </div>
         <footer></footer>
       </div>
     )
-  }
-  componentDidMount() {
-    lineClassify().then(res=>{
-      const info = res.data
-      console.log(info)
-    })
   }
 }
 export default Home;

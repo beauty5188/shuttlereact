@@ -135,7 +135,7 @@ function post(url, param,responseType='json') {
           url,
           data: param,
           responseType:responseType
-      }).then(res => resolve(res))
+      }).then(res => resolve(res.data))
           .catch(err => {
               reject(err);
           });
@@ -149,7 +149,7 @@ function get(url,param,responseType='json') {
           url,
           data: param,
           responseType:responseType
-      }).then(res => resolve(res))
+      }).then(res => resolve(res.data))
           .catch(err => {
               reject(err);
           });

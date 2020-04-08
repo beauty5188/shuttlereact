@@ -1,5 +1,8 @@
-.home header {padding: 10px 0;background: #fff;}
+.home header {padding: 10px 0;background: #fff;margin-bottom: 10px;}
 .home header table {width: 100%;}
 .home header td {text-align: center;padding: 8px;}
 .home header img {width: 48px;}
 .home header span {display: block;font-size: 14px;padding: 8px;color: #666;}
+
+.home .container {background: #fff;width: 100%;}
+.home .container .linestate {margin: 10px 10px; height: 140px;}
