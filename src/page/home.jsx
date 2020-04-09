@@ -30,9 +30,13 @@ class Lineinfo extends Component {
   render() {
     const linelist = this.state.list.map((line, index) =>
       <li key={index}>
-        <div className='linestate' style={{background:"url("+ line.pictureUrl +") no-repeat scroll"}}>
-
-        </div>
+        <div className='linestate' style={{backgroundImage:"url("+ line.pictureUrl +")"}}>
+          <h6><span>{line.lineSubtitle}</span></h6>
+          <p>
+            <span className='left'>{line.lineName}</span>
+            <span className='right'>￥{line.lowestTicketPrice}</span>
+          </p>
+          </div>
       </li>
     )
     return (

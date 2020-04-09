@@ -4,5 +4,16 @@
 .home header img {width: 48px;}
 .home header span {display: block;font-size: 14px;padding: 8px;color: #666;}
 
-.home .container {background: #fff;width: 100%;}
-.home .container .linestate {margin: 10px 10px; height: 140px;}
+.home .container {background: #fff;width: 100%; padding-top: 5px; }
+.home .container .linestate {
+  margin: 5px 15px; 
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 3px;
+  position: relative;
+}
+.home .container h6 {padding-left: 15px;letter-spacing: 1px;color: white;font-size: 16px;}
+.home .container h6 span {padding: 8px 10px;float: left;background-color: #00bcd4;border-radius: 0 0 3px 3px;}
+.home .container p .left {position: absolute;bottom: 15px;color: white;left: 15px;}
+.home .container p .right {position: absolute;bottom: 15px;color: yellow;right: 15px;}
