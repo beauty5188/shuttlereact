@@ -17,3 +17,7 @@
 .home .container h6 span {padding: 8px 10px;float: left;background-color: #00bcd4;border-radius: 0 0 3px 3px;}
 .home .container p .left {position: absolute;bottom: 15px;color: white;left: 15px;}
 .home .container p .right {position: absolute;bottom: 15px;color: yellow;right: 15px;}
+
+.home footer {position: fixed;bottom: 0;border-top: solid 1px gray;width: 100%;}
+.home footer ul {width: 100%;}
+.home footer li {width: 33.33%;float: left;height: 40px;}

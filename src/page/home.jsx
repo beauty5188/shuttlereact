@@ -5,6 +5,8 @@ import matouimg from '../asset/img/jichang.png'
 import youyunimg from '../asset/img/matou.png'
 import dingzhiimg from '../asset/img/yiyuan.png'
 import mayunimg from '../asset/img/zhangjiang.png'
+import dingdan from '../asset/img/dingdan.png'
+import geren from '../asset/img/geren.png'
 
 class Lineinfo extends Component {
   //定义数据
@@ -76,7 +78,16 @@ class Home extends Component {
         <div className='container'>
           <Lineinfo />
         </div>
-        <footer></footer>
+        <footer>
+            <ul>
+                <li><p>
+                    <b></b>
+                    <span>订单查询</span>
+                </p></li>
+                <li><p><span>电子票夹</span></p></li>
+                <li><p><span>出行人</span></p></li>
+            </ul>
+        </footer>
       </div>
     )
   }
